@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ulssQB2fqlQqtstUkG08DXK/gff6TW4q0b6CeHsEiF9KfaiYVFCKZ9rRGeCmHZAZssHAG9Noa4FCHagL3VBgXg==",
+  "dgSpecHash": "9NSu2F2YM5sLL0d4RMBVtjDSoLMqV4QTbq1PFRJQtPFWZsOguqVDvOFIPIkNTZHm6cgGPQ3OewcLkWgGy49kpQ==",
   "success": true,
-  "projectFilePath": "F:\\Desktop\\Popka\\Visual Studio\\BTree.Test\\BTree.Test.csproj",
+  "projectFilePath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree.Test\\BTree.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrmis\\.nuget\\packages\\microsoft.codecoverage\\16.4.0\\microsoft.codecoverage.16.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
