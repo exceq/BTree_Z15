@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
@@ -6,7 +8,8 @@ namespace BTree_lib
 {
     /// <typeparam name="K">Тип ключа B-дерева.</typeparam>
     /// <typeparam name="V">Тип значения B-дерева связанный с каждым ключем.</typeparam>
-    public class BTree<K, V> where K : IComparable<K>
+    public class BTree<K, V> : IEnumerable <V>
+        where K : IComparable<K> 
     {
         public BTree(int degree)
         {
@@ -44,6 +47,7 @@ namespace BTree_lib
         /// <param name="newValue">Новое значение.</param>
         public void Insert(K newKey, V newValue)
         {
+            //list.Add(newValue);
             if (!Root.HasReachedMaxEntries)
                 InsertNonFull(Root, newKey, newValue);
             else
@@ -66,6 +70,7 @@ namespace BTree_lib
         /// <param name="keyToDelete">Ключ, который необходимо удалить.</param>
         public void Delete(K keyToDelete)
         {
+            //list.Remove(Search(keyToDelete).Value);
             Delete(Root, keyToDelete);
             // если последнее Вхождение корня было перемещено в Вершину потомка, удалить корень
             if (Root.Entries.Count == 0 && !Root.IsLeaf)
@@ -288,5 +293,34 @@ namespace BTree_lib
 
             InsertNonFull(node.Children[positionToInsert], newKey, newValue);
         }
-    }
+
+        public bool Contains(K id)
+        {
+            return Search(id) != null;
+        }
+
+
+        List<V> list = new List<V>(); 
+        void Num(Node<K, V> node, List<V> list)
+        {
+            if (node.Children.Count() != 0)
+                foreach (var c in node.Children)
+                    Num(c, list);
+            foreach (var e in node.Entries)
+                list.Add(e.Value);
+        }
+
+        public IEnumerator<V> GetEnumerator()
+        {
+            list = new List<V>();
+            Num(Root, list);
+            foreach (var e in list)
+                yield return e;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }    
 }

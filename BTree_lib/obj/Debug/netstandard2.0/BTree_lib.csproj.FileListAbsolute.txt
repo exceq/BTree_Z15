@@ -7,12 +7,12 @@ F:\Desktop\Popka\Visual Studio\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.Asse
 F:\Desktop\Popka\Visual Studio\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.csproj.CoreCompileInputs.cache
 F:\Desktop\Popka\Visual Studio\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.dll
 F:\Desktop\Popka\Visual Studio\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.pdb
-F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\bin\Debug\netstandard2.0\BTree_lib.deps.json
-F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\bin\Debug\netstandard2.0\BTree_lib.dll
-F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\bin\Debug\netstandard2.0\BTree_lib.pdb
 F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.csprojAssemblyReference.cache
 F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.AssemblyInfoInputs.cache
 F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.AssemblyInfo.cs
 F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.csproj.CoreCompileInputs.cache
-F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.dll
-F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\obj\Debug\netstandard2.0\BTree_lib.pdb
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\bin\Debug\netstandard2.0\BTree_lib_.deps.json
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\bin\Debug\netstandard2.0\BTree_lib_.dll
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\bin\Debug\netstandard2.0\BTree_lib_.pdb
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\obj\Debug\netstandard2.0\BTree_lib_.dll
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_lib\obj\Debug\netstandard2.0\BTree_lib_.pdb

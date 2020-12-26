@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BTree_lib", "..\BTree_lib\B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BTree.Test", "..\BTree.Test\BTree.Test.csproj", "{8C453944-5973-40B6-8095-B16F6C9C22FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTree_console", "..\BTree_console\BTree_console.csproj", "{1073E37C-CA6F-41C1-895C-6A100C95FFFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8C453944-5973-40B6-8095-B16F6C9C22FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C453944-5973-40B6-8095-B16F6C9C22FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C453944-5973-40B6-8095-B16F6C9C22FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1073E37C-CA6F-41C1-895C-6A100C95FFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1073E37C-CA6F-41C1-895C-6A100C95FFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1073E37C-CA6F-41C1-895C-6A100C95FFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1073E37C-CA6F-41C1-895C-6A100C95FFFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

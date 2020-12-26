@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BTree_console/1.0.0": {
+        "dependencies": {
+          "BTree_lib": "1.0.0"
+        },
+        "runtime": {
+          "BTree_console.dll": {}
+        }
+      },
+      "BTree_lib/1.0.0": {
+        "runtime": {
+          "BTree_lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BTree_console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BTree_lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

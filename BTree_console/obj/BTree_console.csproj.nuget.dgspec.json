@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_console\\BTree_console.csproj": {}
+  },
+  "projects": {
+    "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_console\\BTree_console.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_console\\BTree_console.csproj",
+        "projectName": "BTree_console",
+        "projectPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_console\\BTree_console.csproj",
+        "packagesPath": "C:\\Users\\mrmis\\.nuget\\packages\\",
+        "outputPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_console\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mrmis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj": {
+                "projectPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj",
+        "projectName": "BTree_lib",
+        "projectPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj",
+        "packagesPath": "C:\\Users\\mrmis\\.nuget\\packages\\",
+        "outputPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mrmis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

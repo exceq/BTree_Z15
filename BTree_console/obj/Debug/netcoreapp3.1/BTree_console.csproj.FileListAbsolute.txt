@@ -1,0 +1,16 @@
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\bin\Debug\netcoreapp3.1\BTree_console.exe
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\bin\Debug\netcoreapp3.1\BTree_console.deps.json
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\bin\Debug\netcoreapp3.1\BTree_console.runtimeconfig.json
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\bin\Debug\netcoreapp3.1\BTree_console.runtimeconfig.dev.json
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\bin\Debug\netcoreapp3.1\BTree_console.dll
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\bin\Debug\netcoreapp3.1\BTree_console.pdb
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\bin\Debug\netcoreapp3.1\BTree_lib.dll
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\bin\Debug\netcoreapp3.1\BTree_lib.pdb
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\obj\Debug\netcoreapp3.1\BTree_console.csprojAssemblyReference.cache
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\obj\Debug\netcoreapp3.1\BTree_console.AssemblyInfoInputs.cache
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\obj\Debug\netcoreapp3.1\BTree_console.AssemblyInfo.cs
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\obj\Debug\netcoreapp3.1\BTree_console.csproj.CoreCompileInputs.cache
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\obj\Debug\netcoreapp3.1\BTree_console.csproj.CopyComplete
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\obj\Debug\netcoreapp3.1\BTree_console.dll
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\obj\Debug\netcoreapp3.1\BTree_console.pdb
+F:\Desktop\Popka\Visual Studio\BTree_Z17\BTree_console\obj\Debug\netcoreapp3.1\BTree_console.genruntimeconfig.cache

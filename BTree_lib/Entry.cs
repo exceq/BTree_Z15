@@ -17,5 +17,10 @@ namespace BTree_lib
         {
             return Key.Equals(other.Key) && Value.Equals(other.Value);
         }
+
+        public override string ToString()
+        {
+            return $"Key: {Key}, Value: {Value}";
+        }
     }
 }
