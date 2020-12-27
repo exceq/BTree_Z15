@@ -41,7 +41,7 @@ namespace Z15
         private void ActionSelected(object sender, RoutedEventArgs e)
         {
             var bt = FindName("bt") as Button;
-            bt.IsEnabled = IsCorrect();
+            //bt.IsEnabled = IsCorrect(FindName("idPanelText") as TextBox);
             var dockPanels = new DockPanel[] { idPanel, firstName, secondName, lastName, faculty, courseNumber };
             ComboBox comboBox = (ComboBox)sender;
             if (comboBox.SelectedIndex == 0)
@@ -50,33 +50,42 @@ namespace Z15
             else
                 foreach (var el in dockPanels.Skip(1))
                     el.Visibility = Visibility.Hidden;
+            DeleteTextFromFields();
+            
         }
 
         private void Text_Changed(object sender, RoutedEventArgs e)
         {
             var bt = FindName("bt") as Button;
-            bt.IsEnabled = IsCorrect();
+            var textBox = sender as TextBox;
+            var isCorrect = IsCorrect(textBox);
+            textBox.BorderBrush = isCorrect ? Brushes.Green :Brushes.Red;
+            bt.IsEnabled = (FindName("cb") as ComboBox).SelectedIndex == 0 ? IsAllCorrect() : IsCorrect(idPanelText);
         }
 
-        private bool IsCorrect()
+        private bool IsAllCorrect()
+        {
+            return IsCorrect(idPanelText)
+                && IsCorrect(courseNumberText)
+                && IsCorrect(lastNameText)
+                && IsCorrect(firstNameText)
+                && IsCorrect(facultyText);
+        }
+
+        private bool IsCorrect(TextBox textBox)
         {
             var cb = FindName("cb") as ComboBox;
-            if (cb.SelectedIndex != 0)
+            switch (textBox.Name)
             {
-                return int.TryParse(idPanelText.Text, out int res);
-            }
-            else
-            {
-                if (!int.TryParse(idPanelText.Text, out int res)
-                    || !int.TryParse(courseNumberText.Text, out int res1))
-                {
+                case "idPanelText":
+                case "courseNumberText":
+                    return int.TryParse(textBox.Text, out int res);
+                case "lastNameText":
+                case "firstNameText":
+                case "facultyText":
+                    return !string.IsNullOrWhiteSpace(textBox.Text);
+                default:
                     return false;
-                }
-                if (string.IsNullOrWhiteSpace(firstNameText.Text)
-                    || string.IsNullOrWhiteSpace(lastNameText.Text)
-                    || string.IsNullOrWhiteSpace(facultyText.Text))
-                    return false;
-                return true;
             }
         }
 
@@ -126,12 +135,18 @@ namespace Z15
                     
                 }
             }
-            idPanelText.Text = "";
-            firstNameText.Text = "";
-            lastNameText.Text = "";
-            secondNameText.Text = "";
-            facultyText.Text = "";
-            courseNumberText.Text = "";
+            DeleteTextFromFields();
+        }
+
+        private void DeleteTextFromFields()
+        {
+            var texts = new[] { idPanelText, firstNameText, lastNameText, secondNameText, facultyText, courseNumberText };
+            foreach (var e in texts)
+            {                
+                e.Text = "";
+                e.BorderBrush = Brushes.Gray;
+            }
+            bt.IsEnabled = (FindName("cb") as ComboBox).SelectedIndex == 0 ? IsAllCorrect() : IsCorrect(idPanelText);
         }
 
         void InitBD(ObservableCollection<Student> students, BTree_INCC<int, Student> tree)
