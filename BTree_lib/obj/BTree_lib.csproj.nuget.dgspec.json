@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj": {}
+    "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z15\\BTree_lib\\BTree_lib.csproj": {}
   },
   "projects": {
-    "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj": {
+    "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z15\\BTree_lib\\BTree_lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj",
+        "projectUniqueName": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z15\\BTree_lib\\BTree_lib.csproj",
         "projectName": "BTree_lib",
-        "projectPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj",
+        "projectPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z15\\BTree_lib\\BTree_lib.csproj",
         "packagesPath": "C:\\Users\\mrmis\\.nuget\\packages\\",
-        "outputPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\obj\\",
+        "outputPath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z15\\BTree_lib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

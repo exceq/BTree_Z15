@@ -12,49 +12,45 @@ namespace BTree_console
         public static Stopwatch sw = new Stopwatch();
         static void Main(string[] args)
         {
-            var tree = new BTree<int,int>(4);
-            //var path = @".\measures\";
-            int count = 100;
+            var tree = new BTree<int,int>(100);
+            var path = @".\measures\";
             var rnd = new Random();
-            for (int i = 0; i < count; i++)
-            {
-                tree.Insert(rnd.Next(100), 1);
-            }
+
             var list = new List<int>();
-            Num(tree.Root);
-        }
-
-        static void Num(Node<int,int> node)
-        {
-            if (node.Children.Count() != 0)
-                foreach (var c in node.Children)
-                    Num(c);
-            foreach (var e in node.Entries)            
-                Console.WriteLine(e.Key);            
-        }
-
-        static void DoAndMeasure(string path, BTree<int,int> tree, List<int> data, Action<int, int> act)
-        {
-            path = path + act.Method.Name + ".csv";
-            int prev = 1;
-            int prevprev = 1;
-            for (int i = 1; i < data.Count; i=prev+prevprev)
+            foreach (var line in File.ReadAllLines(@".\students.txt").Skip(1).Select(x => x.Split(';')))
             {
-                Measure(path, tree, data.Take(i).ToList(), act);
-                prevprev = prev;
-                prev = i;
+                var st = new Student(int.Parse(line[0]), line[1], line[2], line[3], line[4], int.Parse(line[5]));
+                list.Add(1);
+            }
+            DoAndMeasure(path, tree, list, tree.Insert);
+        }
+
+        static void DoAndMeasure<V>(string path, BTree<int,V> tree, List<V> data, Action<int, int> act)
+        {
+            path = path + act.Method.Name + "11.csv";
+            for (int j = 0; j < 10; j++)
+            {
+                int prev = 1;
+                int prevprev = 1;
+                for (int i = 1; i < data.Count; i = i+10000)
+                {
+                    //tree = new BTree<int, V>(tree.Degree);
+                    Measure(path, tree, data.Take(i).ToList(), act);
+                    prevprev = prev;
+                    prev = i;
+                }
             }
         }
 
-        private static void Measure(string path, BTree<int, int> tree, List<int> data, Action<int, int> act)
+        private static void Measure<V>(string path, BTree<int, V> tree, List<V> data, Action<int, int> act)
         {
             sw.Start();
             for (int i = 0; i < data.Count; i++)
             {
-                act(data[i], 1);
+                act(tree.Count,tree.Degree*tree.Height);
             }
             sw.Stop();
-            File.AppendAllText(path, $"{data.Count};{sw.ElapsedMilliseconds}");
+            File.AppendAllText(path, $"{tree.Count};{sw.ElapsedMilliseconds};\n");
         }
     }
 }

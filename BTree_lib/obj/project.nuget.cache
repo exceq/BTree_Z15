@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OlI3CAzSyV331CqwSxDH8EVcleto+F+KbTBOYVPR6hL0pxjAKLvpLmEcPB6TPQhOqaO49GR4SOq6+9CBqz1x/g==",
+  "dgSpecHash": "i+eq+mBeq11qiXSH1un2Cy0XGJjJI2tDAo+PxKK795uO7hf57eKkAbALay6EHiPEl5GbfucXE4/qwCgMVuGX/g==",
   "success": true,
-  "projectFilePath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z17\\BTree_lib\\BTree_lib.csproj",
+  "projectFilePath": "F:\\Desktop\\Popka\\Visual Studio\\BTree_Z15\\BTree_lib\\BTree_lib.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

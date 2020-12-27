@@ -29,6 +29,8 @@ namespace BTree_lib
 
         public int Height { get; private set; }
 
+        public int Count { get; private set; }
+
         /// <summary>
         /// Метод ищет ключ в B-дереве, возвращающий Entry.
         /// </summary>
@@ -47,7 +49,7 @@ namespace BTree_lib
         /// <param name="newValue">Новое значение.</param>
         public void Insert(K newKey, V newValue)
         {
-            //list.Add(newValue);
+            Count++;
             if (!Root.HasReachedMaxEntries)
                 InsertNonFull(Root, newKey, newValue);
             else
@@ -70,7 +72,7 @@ namespace BTree_lib
         /// <param name="keyToDelete">Ключ, который необходимо удалить.</param>
         public void Delete(K keyToDelete)
         {
-            //list.Remove(Search(keyToDelete).Value);
+            Count--;
             Delete(Root, keyToDelete);
             // если последнее Вхождение корня было перемещено в Вершину потомка, удалить корень
             if (Root.Entries.Count == 0 && !Root.IsLeaf)
@@ -299,22 +301,22 @@ namespace BTree_lib
             return Search(id) != null;
         }
 
-
-        List<V> list = new List<V>(); 
-        void Num(Node<K, V> node, List<V> list)
+        IEnumerable<V> EnumerateTree(Node<K, V> node)
         {
             if (node.Children.Count() != 0)
+            {
                 foreach (var c in node.Children)
-                    Num(c, list);
+                    foreach (var c1 in EnumerateTree(c))
+                        yield return c1;
+            }
             foreach (var e in node.Entries)
-                list.Add(e.Value);
+                yield return e.Value;
         }
 
         public IEnumerator<V> GetEnumerator()
         {
-            list = new List<V>();
-            Num(Root, list);
-            foreach (var e in list)
+
+            foreach (var e in EnumerateTree(Root))
                 yield return e;
         }
 

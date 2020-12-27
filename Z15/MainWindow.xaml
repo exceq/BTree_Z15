@@ -1,0 +1,66 @@
+﻿<Window x:Class="Z15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Z15"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <StackPanel x:Name="fields">
+                <Label>Выберите действие:</Label>
+                <ComboBox Name="cb" SelectedIndex="0">
+                    <ComboBoxItem>Добавить студента</ComboBoxItem>
+                    <ComboBoxItem>Удалить студента по id</ComboBoxItem>
+                    <ComboBoxItem>Найти студента по id</ComboBoxItem>
+                </ComboBox>
+                <DockPanel Name="idPanel">
+                    <Label>id:</Label>
+                    <TextBox Name="idPanelText" TextChanged="Text_Changed" MinWidth ="100" Margin="5" MinHeight="18" VerticalAlignment="Center"/>
+                </DockPanel>
+                <DockPanel Name="lastName">
+                    <Label>Фамилия:</Label>
+                    <TextBox Name="lastNameText" TextChanged="Text_Changed" MinWidth ="100" Margin="5" MinHeight="18" VerticalAlignment="Center"/>
+                </DockPanel>
+                <DockPanel Name="firstName">
+                    <Label>Имя:</Label>
+                    <TextBox Name="firstNameText" TextChanged="Text_Changed" MinWidth ="100" Margin="5" MinHeight="18" VerticalAlignment="Center"/>
+                </DockPanel>
+                <DockPanel Name="secondName">
+                    <Label>Отчество:</Label>
+                    <TextBox Name="secondNameText" MinWidth ="100" Margin="5" MinHeight="18" VerticalAlignment="Center"/>
+                </DockPanel>
+                <DockPanel Name="faculty">
+                    <Label>Факультет:</Label>
+                    <TextBox Name="facultyText" TextChanged="Text_Changed" MinWidth ="100" Margin="5" MinHeight="18" VerticalAlignment="Center"/>
+                </DockPanel>
+                <DockPanel Name="courseNumber">
+                    <Label>Курс:</Label>
+                    <TextBox Name ="courseNumberText" TextChanged="Text_Changed" MinWidth ="100" Margin="5" MinHeight="18" VerticalAlignment="Center"/>
+                </DockPanel>
+            </StackPanel>
+            <Button x:Name="bt" Margin="20" Click="Continue_Click" IsEnabled="False">Применить</Button>
+            <Button x:Name="filterButton" Margin="20" Click="OffFilter_Click">Сбросить фильтр</Button>
+        </StackPanel>
+        <ListView x:Name="studentsGrid1"  Grid.Column="1" ItemsSource="{Binding treeStudents}">
+            <ListView.Resources>
+                <col:ArrayList x:Key="treeStudents"/>
+            </ListView.Resources>
+        </ListView>
+        <DataGrid Grid.Column="1" x:Name="studentsGrid" 
+                  AutoGenerateColumns="True"
+                  ItemsSource="{Binding students}">
+            <DataGrid.Resources>
+                <col:ArrayList x:Key="students"/>
+            </DataGrid.Resources>
+        </DataGrid>
+
+    </Grid>
+</Window>
