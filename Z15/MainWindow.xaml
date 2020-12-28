@@ -7,7 +7,7 @@
         xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="800">
     <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.3*"/>
@@ -47,13 +47,20 @@
                 </DockPanel>
             </StackPanel>
             <Button x:Name="bt" Margin="20" Click="Continue_Click" IsEnabled="False">Применить</Button>
+            <Label>Выбрать факультет:</Label>
+            <ComboBox x:Name="cbFac" SelectionChanged="FacultyChanged" ItemsSource="{Binding fac}">
+                <ComboBox.Resources>
+                    <col:ArrayList x:Key="fac"/>
+                </ComboBox.Resources>
+            </ComboBox>
+            <Label>Выбрать курс:</Label>
+            <ComboBox x:Name="cbCourse" SelectionChanged="CourseChanged" ItemsSource="{Binding courseList}">
+                <ComboBox.Resources>
+                    <col:ArrayList x:Key="courseList"/>
+                </ComboBox.Resources>
+            </ComboBox>
             <Button x:Name="filterButton" Margin="20" Click="OffFilter_Click">Сбросить фильтр</Button>
         </StackPanel>
-        <ListView x:Name="studentsGrid1"  Grid.Column="1" ItemsSource="{Binding treeStudents}">
-            <ListView.Resources>
-                <col:ArrayList x:Key="treeStudents"/>
-            </ListView.Resources>
-        </ListView>
         <DataGrid Grid.Column="1" x:Name="studentsGrid" 
                   AutoGenerateColumns="True"
                   ItemsSource="{Binding students}">

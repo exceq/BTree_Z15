@@ -24,6 +24,8 @@ namespace Z15
     public partial class MainWindow : Window
     {
         BTree_INCC<int, Student> tree;
+        string selectedFac = "";
+        int selectedCourse = -1;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,15 +35,25 @@ namespace Z15
             InitTree(tree);
 
             studentsGrid.ItemsSource = tree;
-            var box = FindName("cb") as ComboBox;
 
-            box.SelectionChanged += ActionSelected;
+            (FindName("cb") as ComboBox).SelectionChanged += ActionSelected;
+
+            var facBox = FindName("cbFac") as ComboBox;
+
+            InitFilterBoxes();
+        }
+
+        private void InitFilterBoxes()
+        {
+            var facBox = FindName("cbFac") as ComboBox;
+            facBox.ItemsSource = tree.Select(x=>x.Faculty).Distinct();
+            var courseBox = FindName("cbCourse") as ComboBox;
+            courseBox.ItemsSource = tree.Select(x => x.CourseNumber).Distinct();
         }
 
         private void ActionSelected(object sender, RoutedEventArgs e)
         {
             var bt = FindName("bt") as Button;
-            //bt.IsEnabled = IsCorrect(FindName("idPanelText") as TextBox);
             var dockPanels = new DockPanel[] { idPanel, firstName, secondName, lastName, faculty, courseNumber };
             ComboBox comboBox = (ComboBox)sender;
             if (comboBox.SelectedIndex == 0)
@@ -50,8 +62,40 @@ namespace Z15
             else
                 foreach (var el in dockPanels.Skip(1))
                     el.Visibility = Visibility.Hidden;
-            DeleteTextFromFields();
-            
+            DeleteTextFromFields();   
+        }
+
+        private void FacultyChanged(object sender, RoutedEventArgs e)
+        {
+            var cb = sender as ComboBox;
+            if (cb.SelectedIndex != -1)
+                selectedFac = cb.SelectedItem.ToString();
+            UseFilter();
+        }
+
+        private void CourseChanged(object sender, RoutedEventArgs e)
+        {
+            var cb = sender as ComboBox;
+            if (cb.SelectedIndex != -1)
+                selectedCourse = cb.SelectedIndex+1;
+            UseFilter();
+        }
+
+        private void UseFilter()
+        {
+            if (selectedCourse != -1 && selectedFac != "")
+            {
+                studentsGrid.ItemsSource = tree.Where(x => x.Faculty == selectedFac && x.CourseNumber == selectedCourse);
+            }
+            else if (selectedCourse == -1)
+            {
+                studentsGrid.ItemsSource = tree.Where(x => x.Faculty == (cbFac.SelectedItem.ToString()));
+            }
+            else if (selectedFac == "")
+            {
+                studentsGrid.ItemsSource = tree.Where(x => x.CourseNumber == selectedCourse);
+            }
+
         }
 
         private void Text_Changed(object sender, RoutedEventArgs e)
@@ -91,8 +135,11 @@ namespace Z15
 
         private void OffFilter_Click(object sender, RoutedEventArgs e)
         {
-            studentsGrid.ItemsSource = null;
             studentsGrid.ItemsSource = tree;
+            cbFac.SelectedIndex = -1;
+            cbCourse.SelectedIndex = -1;
+            selectedCourse = -1;
+            selectedFac = "";
         }
 
         private void Continue_Click(object sender, RoutedEventArgs e)
